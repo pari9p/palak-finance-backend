@@ -59,14 +59,15 @@ The following are the main API endpoints:
 -   `POST /api/auth/register`: Register a new user.
 -   `POST /api/auth/login`: Log in an existing user.
 -   `GET /api/users`: Get all users (Admin only).
+-   `POST /api/users`: Create a new user (Admin only).
 -   `GET /api/users/:id`: Get a user by ID (Admin only).
 -   `PUT /api/users/:id`: Update a user by ID (Admin only).
 -   `DELETE /api/users/:id`: Delete a user by ID (Admin only).
--   `POST /api/transactions`: Create a new transaction.
--   `GET /api/transactions`: Get all transactions for the logged-in user.
--   `GET /api/transactions/all`: Get all transactions (Admin only).
--   `GET /api/transactions/:id`: Get a transaction by ID.
--   `PUT /api/transactions/:id`: Update a transaction by ID.
--   `DELETE /api/transactions/:id`: Delete a transaction by ID.
--   `GET /api/summary`: Get a summary of transactions for the logged-in user.
--   `GET /api/summary/all`: Get a summary of all transactions (Admin only).
+-   `POST /api/financial-records`: Create a new transaction.
+-   `GET /api/financial-records`: Get all transactions for the logged-in user.
+-   `GET /api/financial-records/all`: Get all transactions (Admin only).
+-   `GET /api/financial-records/:id`: Get a transaction by ID.
+-   `PUT /api/financial-records/:id`: Update a transaction by ID.
+-   `DELETE /api/financial-records/:id`: Delete a transaction by ID.
+-   `GET /api/dashboard/summary`: Get a summary of transactions for the logged-in user.
+-   `GET /api/dashboard/summary/all`: Get a summary of all transactions (Admin only).
