@@ -2,15 +2,15 @@ import { Response } from 'express';
 import * as recordService from '../services/financialRecordService';
 import { AuthRequest } from '../middleware/auth';
 
-export const getAllRecords = async (req: AuthRequest, res: Response) => {
+export const getAllRecords = async (req: Request, res: Response) => {
+  if (!req.user) {
+    return res.status(401).json({ message: 'Unauthorized' });
+  }
   try {
-    if (!req.user) {
-      return res.status(401).json({ message: 'Unauthorized' });
-    }
-    const records = await recordService.getAllRecords(req.user.id, req.query);
-    res.status(200).json(records);
+    const records = await financialRecordService.getAllRecords(req.user.id, req.query);
+    res.json(records);
   } catch (error) {
-    res.status(500).json({ message: 'Failed to get records', error });
+    res.status(500).json({ message: 'Error fetching records' });
   }
 };
 

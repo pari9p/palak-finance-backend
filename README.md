@@ -64,7 +64,7 @@ The following are the main API endpoints:
 -   `PUT /api/users/:id`: Update a user by ID (Admin only).
 -   `DELETE /api/users/:id`: Delete a user by ID (Admin only).
 -   `POST /api/financial-records`: Create a new transaction.
--   `GET /api/financial-records`: Get all transactions for the logged-in user.
+-   `GET /api/financial-records`: Get all transactions for the logged-in user. Supports filtering by `type`, `category`, `startDate`, and `endDate`.
 -   `GET /api/financial-records/all`: Get all transactions (Admin only).
 -   `GET /api/financial-records/:id`: Get a transaction by ID.
 -   `PUT /api/financial-records/:id`: Update a transaction by ID.
